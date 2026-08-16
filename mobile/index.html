@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+<title>BattleMerge</title>
+<meta name="description" content="BattleMerge — fusionnez vos héros et affrontez votre adversaire, jouable sur iPhone." />
+
+<meta name="theme-color" content="#11131c" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="apple-mobile-web-app-title" content="BattleMerge" />
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" />
+<link rel="manifest" href="manifest.webmanifest" />
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="app">
+
+  <!-- Ecran menu -->
+  <section id="screen-menu" class="screen active">
+    <h1 class="title">BattleMerge</h1>
+    <p class="subtitle">Fusionnez vos héros. Ecrasez l'adversaire.</p>
+    <button id="btn-play" class="btn btn-primary">Jouer</button>
+    <button id="btn-index" class="btn btn-secondary">Index des héros</button>
+    <p class="hint">Astuce : ajoutez BattleMerge à votre écran d'accueil pour y jouer en plein écran.</p>
+  </section>
+
+  <!-- Ecran index des heros -->
+  <section id="screen-index" class="screen">
+    <header class="index-header">
+      <button id="btn-index-back" class="btn btn-back">← Retour</button>
+      <h2>Index des héros</h2>
+    </header>
+    <div id="index-grid" class="index-grid"></div>
+  </section>
+
+  <!-- Ecran de jeu -->
+  <section id="screen-game" class="screen">
+    <div class="game-header">
+      <div id="label-p2" class="player-label">Joueur 2</div>
+      <button id="btn-menu" class="btn-icon" title="Menu">☰</button>
+    </div>
+
+    <div id="board" class="board"></div>
+
+    <div class="game-footer">
+      <div id="label-p1" class="player-label active">Joueur 1</div>
+      <button id="btn-pass" class="btn btn-pass">Passer le tour</button>
+    </div>
+
+    <div id="turn-banner" class="turn-banner"></div>
+  </section>
+
+  <!-- Overlay fin de partie -->
+  <div id="overlay-end" class="overlay hidden">
+    <div class="overlay-card">
+      <h2 id="end-title">Victoire !</h2>
+      <button id="btn-restart" class="btn btn-primary">Nouvelle partie</button>
+      <button id="btn-end-menu" class="btn btn-secondary">Menu principal</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
