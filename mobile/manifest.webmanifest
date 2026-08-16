@@ -1,0 +1,16 @@
+{
+  "name": "BattleMerge",
+  "short_name": "BattleMerge",
+  "description": "Fusionnez vos héros et affrontez votre adversaire.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#17191f",
+  "theme_color": "#11131c",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
